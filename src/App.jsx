@@ -19,7 +19,7 @@ function App() {
     "System Analysis", "Business Process Modeling", "Requirement Gathering", 
     "Functional Requirement Spesification (FRS)", "OOP", "SDLC", "UML Design", 
     "SQL", "Database Management", "Data Preprocessing", "Natural Language Processing (NLP)", 
-    "Python", "Java", "HTML", "CSS", "JavaScript", "React.js", "Django", 
+    "Git", "Python", "Java", "HTML", "CSS", "JavaScript", "React.js", "Django", 
   ]);
 
   const [daftarProject] = useState([
