@@ -1,0 +1,831 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, #app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; 
+}
+
+body {
+  background-color: #f5ebd9;
+  color: #1f2937;
+  width: 100vw;              /* Menghasilkan lebar penuh mentok layar */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0;     
+}
+
+.portfolio-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-top: 120px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #f5eae1;}
+
+/* --- Desain Menu Navigasi --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  z-index: 1000;
+  background-color: #faeeb6;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02); 
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #dd196b;
+  padding: 10px; 
+}
+
+.navbar .logo span {
+  color: #1f2937;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 10px; 
+
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #4b5563; 
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover, 
+.navbar .nav-links a.active {
+  color: #740d38;
+  font-weight: 600;
+}
+
+/* --- Desain Layout Utama (Hero Section) --- */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75vh;
+  width: 100%;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Desain Teks Kiri */
+.hero-text {
+  flex: 1;
+  max-width: 550px;
+  padding-left: 100px;
+}
+
+.hero-text .greeting {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #dd196b; 
+  margin-bottom: 10px;
+}
+
+.hero-text .name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a; /* Hitam Pekat */
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-text .job {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 25px;
+}
+
+
+.btn-project {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #dd196b;
+  color: white !important;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(209, 29, 97, 0.2);;
+}
+
+.btn-project:hover {
+  background-color: #740d38;
+  transform: translateY(-2px);
+}
+
+/* --- Desain Foto Kanan --- */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  }
+
+.profile-img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Pengaturan Komponen Halaman Baru --- */
+.page-section {
+  padding: 100px 8%; 
+  min-height: 60vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); 
+  width: 100vw;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #d11d61; /* Warna pink/magenta tombol Anda */
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.8;
+  max-width: 1100px;
+}
+
+/* --- Desain Grid Proyek --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Membuat kotak otomatis menyesuaikan lebar layar */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Efek mengangkat sedikit saat kursor diarahkan ke kotak */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.project-link {
+  color: #d11d61; 
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+  color: #b0144f;
+}
+
+.project-link-disabled {
+  color: #94a3b8; /* Abu-abu redup elegan */
+  font-size: 0.88rem;
+  font-weight: 500;
+  background-color: #f8fafc;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  align-self: flex-start; /* Mengunci lencana di pojok kiri bawah */
+}
+
+/* --- Desain Bagian Kontak --- */
+.kontak-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kontak-section .section-title::after {
+  margin: 10px auto 0 auto; 
+}
+
+.btn-email {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #0f172a;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #d11d61;
+  padding-bottom: 5px;
+  transition: color 0.2s;
+}
+
+.btn-email:hover {
+  color: #d11d61;
+}
+
+/* --- Desain Footer --- */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+a.btn-contact {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #d11d61; 
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+a.btn-contact:hover {
+  background-color: #b0144f;
+}
+
+/* --- Desain Wadah & Kapsul Skills --- */
+.skills-container {
+  margin-top: 40px; 
+  width: 100%;
+}
+
+.skills-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.skills-badge-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; 
+
+.skill-badge {
+  background-color: #f3f4f6; 
+  color: #4b5563;           
+  padding: 8px 18px;         
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 50px;       
+  border: 1px solid #d11d61; 
+}
+
+.skill-badge:hover {
+  background-color: #d11d61;
+  color: #1f2937;
+}
+}
+
+/* --- Pengaturan Gambar Dalam Kartu Proyek --- */
+
+/* Mengatur agar padding kartu bawaan tidak menjepit gambar ke dalam */
+.project-card {
+  background-color: #ffffff;
+  padding: 0; 
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden; 
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: 240px; 
+  background-color: #f3f4f6; 
+}
+
+.project-img-cover {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img-cover {
+  transform: scale(1.05);
+}
+
+.project-card-body {
+  padding: 22px;
+}
+
+.edu-dark-section {
+  background-color: #d11d61; /* Warna biru abu-abu pekat gelap yang elegan */
+  width: 100vw;              /* Menghasilkan lebar penuh mentok layar */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 80px 0;           /* Jarak vertikal dalam blok */
+  text-align: center;        /* Membuat semua teks otomatis di tengah */
+}
+
+.edu-dark-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.edu-tagline {
+  color: #e4d7af;           /* Warna ungu cerah modern untuk tag kecil atas */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.edu-main-title {
+  color: #ffffff;           /* Judul putih kontras tegas */
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.edu-subtitle {
+  color: #9ca3af;           
+  margin-bottom: 50px;
+}
+
+/* --- Pengaturan Layout Baris Logo --- */
+.edu-logo-grid {
+  display: flex;
+  justify-content: center;  /* Mengumpulkan logo tepat di tengah */
+  align-items: center;
+  flex-wrap: wrap;          /* Otomatis turun baris di layar kecil */
+  gap: 50px;                /* Jarak renggang antar logo */
+}
+
+.edu-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;             /* Menyamakan kotak imajiner dudukan logo */
+  transition: transform 0.3s ease;
+}
+
+.edu-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;          /* Mengunci tinggi area logo */
+  margin-bottom: 15px;    /* Jarak pisah antara bawah logo dengan teks nama */
+}
+
+.edu-brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;     
+  filter: grayscale(100%);  
+  opacity: 0.6;             
+  transition: all 0.3s ease;
+}
+
+.edu-item-name {
+  color: #ffffff;         /* Warna putih agar kontras dengan latar belakang */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.edu-item-period {
+  color: rgba(255, 255, 255, 0.7); /* Warna putih transparan/abu-abu lembut untuk tahun */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.edu-logo-item:hover {
+  transform: translateY(-5px); /* Logo sedikit terangkat */
+}
+
+.edu-logo-item:hover .edu-brand-logo {
+  filter: grayscale(0%);    /* Logo kembali berwarna asli */
+  opacity: 1;               /* Tingkat kecerahan logo penuh */
+}
+
+/* --- Desain Bagian Pengalaman (Experience) --- */
+
+.exp-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Bingkai Kartu dengan Pinggiran Melengkung Lembut Khas Target Gambar */
+.exp-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;      /* Garis luar abu-abu tipis netral */
+  border-radius: 16px;            /* Sudut melengkung halus modern */
+  padding: 35px;
+  display: flex;                  /* Mengaktifkan sistem kolom kiri-kanan */
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efek highlight ungu transparan tipis saat kartu disorot kursor */
+.exp-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+}
+
+/* Kolom Kiri: Lebar Tetap untuk Identitas Perusahaan */
+.exp-left-col {
+  flex: 0 0 200px;                /* Mengunci lebar kolom kiri agar konsisten */
+}
+
+.exp-company {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.exp-duration {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Kolom Kanan: Fleksibel Memenuhi Ruang Sisa untuk Teks Peran & Deskripsi */
+.exp-right-col {
+  flex: 1;
+}
+
+.exp-position {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.exp-desc {
+  font-size: 1rem;
+  color: #475569;                 /* Warna abu-abu gelap untuk kenyamanan membaca teks panjang */
+  line-height: 1.7;               /* Mengatur kerapatan baris kalimat agar lapang */
+}
+
+/* Aturan Responsif untuk Layar Handphone (Otomatis Menumpuk Vertikal) */
+@media (max-width: 768px) {
+  .exp-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+  }
+  .exp-left-col {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* --- Desain Grid Kotak Sertifikasi (Certification) --- */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsif otomatis mengisi ruang lebar */
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.cert-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px); /* Kartu naik sedikit saat kursor mendekat */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* Pembungkus Gambar Pratinjau Sertifikat */
+.cert-image-wrapper {
+  width: 100%;
+  height: 350px; /* Tinggi seragam untuk proporsi scan sertifikat horizontal */
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.cert-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar terpotong rapi tanpa merusak rasio dimensi aslinya */
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-img-cover {
+  transform: scale(1.03); /* Animasi zoom tipis yang elegan */
+}
+
+/* Desain Area Teks di Dalam Kartu */
+.cert-card-body {
+  padding: 25px;
+}
+
+.cert-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.cert-schema {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.cert-schema span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cert-period {
+  font-size: 0.88rem;
+  color: #94a3b8; /* Abu-abu terang khusus informasi tanggal terbit */
+  font-weight: 500;
+}
+
+/* --- Pengaturan Desain Kontak Profesional Terpusat --- */
+
+.kontak-dark-section {
+  background-color: #d11d61; 
+  width: 100vw;              
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 100px 0;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontak-clean-content {
+  max-width: 800px; /* Diperlebar sedikit agar grid 2 kolom muat sempurna */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.kontak-tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.kontak-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.kontak-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+/* Penataan Email */
+.email-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.email-icon-label {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.kontak-email-link {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 3px;
+  transition: all 0.2s ease;
+}
+
+.kontak-email-link:hover {
+  border-color: #ffffff;
+  letter-spacing: 0.5px; /* Efek interaktif melebar halus saat disorot */
+}
+
+/* --- PERBAIKAN UTAMA: GRID 2 KOLOM HORIZONTAL (KIRI-KANAN) --- */
+.social-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Membagi 2 kolom sama rata */
+  gap: 20px;
+  width: 100%;
+  max-width: 650px; /* Kunci lebar maksimal agar bentuknya proporsional */
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.12); /* Transparansi premium melayang */
+  padding: 18px 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  text-align: left;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-4px); /* Efek melayang naik sedikit */
+  background-color: rgba(255, 255, 255, 0.22); 
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15); /* Lingkaran transparan di belakang ikon */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Mencegah ikon menyusut saat teks panjang */
+}
+
+.social-text strong {
+  font-size: 1rem;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.social-text p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Responsif untuk Layar Handphone (Otomatis Kembali ke 1 Kolom Vertikal) */
+@media (max-width: 650px) {
+  .social-clean-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+
+.footer-clean {
+  width: 100%;
+  background-color: #f5eae1; /* Menjaga warna latar belakang krim utama portfolio Anda */
+  padding: 10px 0 20px 0;    /* Jarak atas dan bawah footer */
+  margin-top: 0;             /* Menempel pas dengan bagian bawah blok kontak */
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Memaksa hak cipta ke kiri dan link ke kanan secara otomatis */
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Garis horizontal tipis transparan di atas footer */
+  padding-top: 25px;         /* Jarak dari garis pembatas ke teks */
+}
+
+/* Sisi Kiri: Teks Hak Cipta */
+.footer-copyright {
+  color: #64748b;            /* Abu-abu lembut profesional */
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Sisi Kanan: Tombol Back to Top */
+.footer-back-to-top {
+  color: #0f172a;            /* Hitam tegas pekat sesuai contoh gambar */
+  text-decoration: none;     /* Menghilangkan garis bawah link */
+  font-size: 0.9rem;
+  font-weight: 600;          /* Teks agak tebal agar tegas */
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Efek interaktif saat kursor diarahkan ke tulisan Back to top */
+.footer-back-to-top:hover {
+  color: #6c25e8;            /* Berubah menjadi ungu aksen saat disorot */
+  transform: translateY(-2px); /* Terangkat sedikit ke atas */
+}
+
+/* Penyesuaian Responsif Layar Handphone (Teks otomatis berjejer vertikal di tengah) */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
