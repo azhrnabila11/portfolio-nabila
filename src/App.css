@@ -829,3 +829,105 @@ a.btn-contact:hover {
     text-align: center;
   }
 }
+
+
+/* UNTUK LAYAR SMARTPHONE / HP (Maksimal Lebar 768px) */
+@media (max-width: 768px) {
+  
+  /* Kontainer Utama: Kurangi padding samping agar ruang konten di HP lebih lega */
+  .portfolio-container {
+    padding: 0 5%;
+    padding-top: 80px; 
+  }
+
+  /* Navbar: Ubah menu berjejer menjadi bisa scroll horizontal atau sembunyi rapi */
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .navbar .nav-links {
+    gap: 15px; 
+    overflow-x: auto; 
+    white-space: nowrap;
+    padding-bottom: 5px;
+  }
+  
+  .navbar .nav-links a {
+    font-size: 0.85rem; 
+    padding: 6px 10px;
+  }
+
+  /* Hero Section: Ubah susunan dari Kiri-Kanan menjadi Menumpuk Vertikal */
+  .hero-section {
+    flex-direction: column-reverse; 
+    text-align: center; 
+    gap: 30px;
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding-left: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .hero-text .name {
+    font-size: 2.3rem; /* Perkecil ukuran font nama agar tidak patah berantakan */
+    line-height: 1.2;
+  }
+
+  .image-bg-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .page-section {
+    padding: 60px 5%; /* Perkecil jarak pembatas antar bab di HP */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Bagian Pendidikan (Blok Gelap) */
+  .edu-dark-section {
+    padding: 60px 0;
+  }
+  
+  .edu-main-title {
+    font-size: 1.8rem;
+  }
+
+  .edu-logo-grid {
+    gap: 40px; 
+  }
+
+  .edu-logo-item {
+    width: 100%; /
+  }
+
+  /* Bagian Experience: Ubah 2 kolom menjadi menumpuk ke bawah */
+  .exp-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+  }
+
+  .exp-left-col {
+    flex: none;
+    width: 100%;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+  }
+
+  /* Grid Proyek & Sertifikasi: Otomatis Menjadi 1 Kolom Penuh */
+  .project-grid, .cert-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .project-image-wrapper, .cert-image-wrapper {
+    height: 180px; 
+  }
+}

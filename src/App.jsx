@@ -291,7 +291,7 @@ function App() {
           <p className="footer-copyright">
             &copy; 2026 {biodata.nama}. 
           </p>
-          <a href="#beranda" className="footer-back-to-top">
+          <a href="#home" className="footer-back-to-top">
             Kembali ke atas &uarr;
           </a>
         </div>
