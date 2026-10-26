@@ -97,7 +97,7 @@ function App() {
           <li><a href="#home" className="active">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#project">Project</a></li>
-          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#certification">Certification</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -171,9 +171,9 @@ function App() {
         </div>
        </section>
 
-        <section id="pendidikan" className="edu-dark-section">
+        <section id="education" className="edu-dark-section">
         <div className="edu-dark-content">
-          <p className="edu-tagline">Pendidikan</p>
+          <p className="edu-tagline">Education</p>
           <h2 className="edu-main-title">Riwayat Pendidikan</h2>
           <p className="edu-subtitle">Pernah belajar pada sekolah dan universitas berikut</p>
           
