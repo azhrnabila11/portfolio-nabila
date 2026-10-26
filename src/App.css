@@ -905,7 +905,8 @@ a.btn-contact:hover {
   }
 
   .edu-logo-item {
-    width: 100%; /
+    width: 100%; 
+    max-width: 280px;
   }
 
   /* Bagian Experience: Ubah 2 kolom menjadi menumpuk ke bawah */
