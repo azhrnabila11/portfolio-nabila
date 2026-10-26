@@ -26,14 +26,14 @@ function App() {
     {
       id: 1,
       nama:"Stemming Bahasa Sunda",
-      deskripsi: "membangun web pemroses teks, stemming, dan analisis keterbacaan naskah Bahasa Sunda berbasis Django. Mengimplementasikan modifikasi algoritma Enhanced Confix Stripping (ECS) yang disesuaikan dengan morfologi bahasa Sunda serta mengintegrasikan metode Gunning Fog Index (GFI) untuk mengukur tingkat keterbacaan dokumen secara otomatis.",
+      deskripsi: "Membangun web pemroses teks, stemming, dan analisis keterbacaan naskah Bahasa Sunda berbasis Django. Mengimplementasikan modifikasi algoritma Enhanced Confix Stripping (ECS) yang disesuaikan dengan morfologi bahasa Sunda serta mengintegrasikan metode Gunning Fog Index (GFI) untuk mengukur tingkat keterbacaan dokumen secara otomatis.",
       linkProject: "https://stemming-bahasa-sunda.vercel.app/",
-      gambar: imgStemming 
+      gagitbar: imgStemming 
     },
     {
       id: 2,
       nama:"Sistem Informasi Pengaduan Lingkungan (SIPLIK)",
-      deskripsi: "merancang dokumen kebutuhan sistem untuk membangun website pengaduan lingkungan, sistem ini dirancang untuk menyediakan media pelaporan permasalahan lingkungan yang terstruktur dan terdokumentasi dengan baik. Kontribusi saya pada project ini yaitu dalam menyusun Software Requirements Specification (SRS).",
+      deskripsi: "Merancang dokumen kebutuhan sistem untuk membangun website pengaduan lingkungan, sistem ini dirancang untuk menyediakan media pelaporan permasalahan lingkungan yang terstruktur dan terdokumentasi dengan baik. Kontribusi saya pada project ini yaitu dalam menyusun Software Requirements Specification (SRS).",
       linkProject:"",
       gambar: imgSiplik 
     },
