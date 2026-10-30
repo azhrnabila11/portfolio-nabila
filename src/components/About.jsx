@@ -6,6 +6,7 @@ function About() {
         <h2 className="section-title">About Me</h2>
         <div className="section-content">
           <p>
+            Saya adalah seorang analis sekaligus pengembang sistem informasi yang gemar memecahkan masalah lewat data dan kode. Berbekal latar belakang Sistem Informasi, saya terbiasa melakukan pemodelan proses bisnis, data preprocessing dengan Python, hingga pengelolaan database berbasis SQL untuk menghasilkan wawasan yang efisien.
           </p>
           <br />
           <p>

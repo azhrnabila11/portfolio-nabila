@@ -33,11 +33,18 @@ export const daftarProject = [
       id: 2,
       nama:"Sistem Informasi Pengaduan Lingkungan (SIPLIK)",
       deskripsi: "Merancang dokumen kebutuhan sistem untuk membangun website pengaduan lingkungan, sistem ini dirancang untuk menyediakan media pelaporan permasalahan lingkungan yang terstruktur dan terdokumentasi dengan baik. Kontribusi saya pada project ini yaitu dalam menyusun Software Requirements Specification (SRS).",
-      linkProject:"",
+      linkProject:"https://drive.google.com/drive/folders/1qV9bMmC7rbVH2Ac9uTEGwpgvY2e4iF2S?usp=sharing",
       gambar: imgSiplik 
     },
     {
       id: 3,
+      nama:"ArenaTek",
+      deskripsi: "Merancang dokumen kebutuhan sistem untuk membangun website penyewaan lapangan tenis serbaguna (ArenaTek). Kontribusi saya pada project ini, dalam menganalisis kebutuhan bisnis dan proses bisnis untuk pengembangan sistem. Menyusun dokumen Software Requirements Specification (SRS), merancang diagram UML dan kebutuhan basis data, dan mendokumentasikan spesifikasi fungsional dengan kolaborasi bersama stakeholders untuk memastikan kebutuhan sistem sesuai dengan tujuan project.",
+      linkProject:"https://drive.google.com/drive/folders/1I_ql9oS9aAUYEcVHC28Lmj42ca1M1Mkw?usp=sharing",
+      gambar: imgPortfolio
+    },
+    {
+      id: 4,
       nama:"Portfolio Pribadi",
       deskripsi: "Membangun website portofolio dinamis berbasis React.js sebagai media representasi digital keahlian analitis dan teknis saya di bidang Sistem Informasi.",
       linkProject:"",
@@ -67,7 +74,7 @@ export const daftarPengalaman = [
       perusahaan: "Balai Besar Pengujian Teknologi Mineral dan Batubara TekMIRA",
       posisi: "System Analyst Intern",
       durasi: "3 Bulan (2025)",
-      deskripsi: "Berkontribusi dalam menganalisis kebutuhan bisnis dan proses bisnis untuk pengembangan sistem informasi penyewaan lapangan tenis serbaguna. Menyusun dokumen Software Requirements Specification (SRS), merancang diagram UML dan kebutuhan basis data, serta mendokumentasikan spesifikasi fungsional melalui kolaborasi dengan stakeholders untuk memastikan kebutuhan sistem sesuai dengan tujuan proyek."
+      deskripsi: "Berkontribusi dalam menganalisis kebutuhan bisnis dan proses bisnis untuk pengembangan sistem informasi penyewaan lapangan tenis serbaguna (ArenaTek). Menyusun dokumen Software Requirements Specification (SRS), merancang diagram UML dan kebutuhan basis data, serta mendokumentasikan spesifikasi fungsional melalui kolaborasi dengan stakeholders untuk memastikan kebutuhan sistem sesuai dengan tujuan proyek."
     }
   ]
 
