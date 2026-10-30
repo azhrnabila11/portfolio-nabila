@@ -2,6 +2,7 @@ import fotoProfil from '../assets/pas-foto.png'
 import imgStemming from '../assets/project-stemming.png'
 import imgPortfolio from '../assets/project-portfolio.png'
 import imgSiplik from '../assets/project-Siplik.png'
+import imgArenatek from '../assets/project-arenatek.png'
 import logoUniv from '../assets/unikom-logo.png' 
 import logoSekolah from '../assets/sman21-logo.png' 
 import imgCert1 from '../assets/imgCert1.jpeg' 
@@ -39,9 +40,9 @@ export const daftarProject = [
     {
       id: 3,
       nama:"ArenaTek",
-      deskripsi: "Merancang dokumen kebutuhan sistem untuk membangun website penyewaan lapangan tenis serbaguna (ArenaTek). Kontribusi saya pada project ini, dalam menganalisis kebutuhan bisnis dan proses bisnis untuk pengembangan sistem. Menyusun dokumen Software Requirements Specification (SRS), merancang diagram UML dan kebutuhan basis data, dan mendokumentasikan spesifikasi fungsional dengan kolaborasi bersama stakeholders untuk memastikan kebutuhan sistem sesuai dengan tujuan project.",
+      deskripsi:"Merancang dokumen kebutuhan sistem untuk membangun website penyewaan lapangan tenis serbaguna (ArenaTek). Kontribusi saya pada project ini, dalam menganalisis kebutuhan bisnis dan proses bisnis untuk pengembangan sistem. Menyusun dokumen Software Requirements Specification (SRS), merancang diagram UML dan kebutuhan basis data, dan mendokumentasikan spesifikasi fungsional dengan kolaborasi bersama stakeholders untuk memastikan kebutuhan sistem sesuai dengan tujuan project.",
       linkProject:"https://drive.google.com/drive/folders/1I_ql9oS9aAUYEcVHC28Lmj42ca1M1Mkw?usp=sharing",
-      gambar: imgPortfolio
+      gambar: imgArenatek
     },
     {
       id: 4,
