@@ -1,5 +1,5 @@
 import fotoProfil from '../assets/pas-foto.png'
-import imgStemming from '../assets/project-stemming.png'
+import imgStemming from '../assets/project-stemming.jpg'
 import imgPortfolio from '../assets/project-portfolio.png'
 import imgSiplik from '../assets/project-Siplik.png'
 import imgArenatek from '../assets/project-arenatek.png'
